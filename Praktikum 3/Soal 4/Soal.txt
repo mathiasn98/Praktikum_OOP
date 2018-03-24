@@ -1,0 +1,14 @@
+Masih menggunakan definisi kelas Box yang ada pada soal sebelumnya, unggah file main.cpp yang isinya adalah main program, yang menggunakan kelas Box untuk menghasilkan keluaran berikut:
+
+ctor 0
+set 0, idx=0, val=99
+show 0: 99 0
+cctor 1
+ctor 2
+assign 2 = 0
+set 0, idx=0, val=299
+show 0: 299 0
+show 1: 299 0
+show 2: 99 0
+dtor 0
+dtor 2

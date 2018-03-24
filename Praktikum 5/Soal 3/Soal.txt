@@ -1,0 +1,81 @@
+Dalam dunia komputer, sebuah gambar terdiri dari beberapa pixel. Dalam teknik-teknik pengolahan gambar, teknik dasar yang sebenarnya kita lakukan adalah mengolah setiap pixel pada gambar.
+
+Pada soal ini Anda diminta untuk mengimplementasikan kelas Pixel sederhana dan beberapa turunannya, GrayscalePixel dan BlackWhitePixel, yang merupakan dasar dari pengolahan gambar. Berikut adalah spesifikasi kelas-kelas yang harus Anda implementasikan. 
+
+KAMUS: r = merah, g = hijau, b = biru
+
+Kelas Pixel
+class Pixel {
+    //hanya berisi method yang belum diimplementasi, pure virtual function
+    void preProcess();
+    void print();
+};
+Kelas GrayscalePixel
+// GrayscalePixel.hpp
+
+class GrayscalePixel adalah turunan dari kelas Pixel {
+ 
+    private:
+        int* rgb; //rgb[0] = r, rgb[1] = g, rgb[2] = b
+
+    //ctor dengan parameter 3 buah integer (r, g, dan b dengan range nilai 0 <= x <= 255, wajib dicek)
+    //Apabila masukan > 255, kembalikan nilai mulai dari 0 lagi
+    //Contoh: 256 -> 0, 257 -> 1, dst
+    //Apabila masukan < 0, kembalikan nilai absolutnya tetap pertahankan range 0 <= x <= 255.
+    //Contoh: -12 -> 12, -257 -> 1
+
+    //cctor
+
+    //dtor
+
+    //getter&setter (masukan setter TIDAK selalu valid)
+    int getRed() const;
+    int getGreen() const;
+    int getBlue() const;
+    void setRed(int r);
+    void setGreen(int g);
+    void setBlue(int b);
+
+    //Implementasi preProcess (method untuk membuat pixel menjadi grayscale)
+    //Grayscale pixel adalah pixel yang memiliki nilai R, G, dan B = rata-rata RGB.
+    //NB: Lakukan pembulatan ke bawah.
+    
+
+    //Implementasi print (method untuk menampilkan pixel)
+    //format: GRAYSCALE(r,g,b) diakhiri endline
+    //contoh: GRAYSCALE(1,12,123)
+}
+Kelas BlackWhitePixel
+// BlackWhitePixel.hpp
+
+class BlackWhitePixel adalah turunan dari kelas GrayscalePixel { 
+    private:
+        const int THRESHOLD;
+
+    //ctor dengan parameter 4 buah integer (r, g, b, dan threshold)
+    //rgb memiliki range nilai 0 <= x <= 255,  wajib dicek
+    //nilai threshold bebas, TIDAK perlu dicek
+    //Apabila masukan > 255, kembalian nilai mulai dari 0 lagi (contoh: 256 -> 0, 257 -> 1, dst)
+    //Apabila masukan < 0, kembalikan nilai absolutnya tetap pertahankan range 0 <= x <= 255.
+    //Contoh: -12 -> 12, -257 -> 1
+
+    //cctor
+
+    //dtor
+
+    //getter
+    int getThreshold() const;
+
+    //Implementasi preProcess (method untuk membuat pixel menjadi warna hitam atau putih)
+    //Black and White pixel adalah grayscale pixel yang:
+    //jika intensitasnya >= threshold maka pixel berwarna putih (R=255, G=255, B=255)
+    //jika intensitasnya < threshold maka pixel berwarna hitam (R=0, G=0, B=0)
+    //Petunjuk: gunakan preProcess grayscale terlebih dahulu untuk mencari intensitas.
+
+    //Implementasi print (method untuk menampilkan pixel)
+    //format: BW(r,g,b,THRESHOLD) diahkhiri endline
+    //contoh: BW(1,12,123,50)
+}
+Pada soal ini, Anda diminta mengumpulkan file Pixel.hpp, GrayscalePixel.hpp, GrayscalePixel.cpp, BlackWhitePixel.hpp dan BlackWhitePixel.cpp dalam sebuah .zip bernama pixel.zip.
+
+Tips: Anda diperbolehkan menggunakan C++ macro define untuk mempermudah pekerjaan Anda!

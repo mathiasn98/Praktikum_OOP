@@ -1,0 +1,90 @@
+Menurut Wikipedia, Rekening bank adalah rekening keuangan pencatatan transaksi keuangan antara pelanggan dan bank mereka dan posisi keuangan yang dihasilkan dari pelanggan dengan bank.
+Rekening bank pada umumnya dibagi menjadi dua jenis, yaitu Rekening Giro dan Rekening Tabungan. Rekening Giro adalah rekening bank yang menatausahakan dana yang sewaktu-waktu dapat ditarik atau disetor oleh nasabah Sedangkan Rekening Tabungan adalah rekening yang dikelola oleh nasabah pada bank untuk tujuan mengumpulkan dana
+
+Diberikan sebuah header kelas Rekening, RekeningGiro, RekeningTabungan sebagai berikut.
+
+// Rekening.h
+#ifndef REKENING_H
+#define REKENING_H
+
+class Rekening {
+public:
+	// Konstruktor untuk menginisialisasi saldo
+	// Set saldo 0.0 apabila saldo bernilai negatif
+	Rekening(double);
+	
+	// Getter, Setter
+	void setSaldo(double);
+	double getSaldo() const;
+	
+	// Member Function
+	// Tambahkan sejumlah nominal uang ke saldo
+	void simpanUang(double); 
+	
+	// Kurangkan sejumlah nominal uang dari saldo apabila saldo mencukupi (tidak negatif setelah dikurangkan)
+	// Kembalikan boolean yang mengindikasikan apakah uang berhasil ditarik atau tidak
+	bool tarikUang(double);
+
+private:
+	double saldo;
+};
+
+#endif
+// RekeningGiro.h
+#ifndef REKENINGGIRO_H
+#define REKENINGGIRO_H
+
+#include "Rekening.h" // include the Account header file
+
+class RekeningGiro : public Rekening {
+public:
+	// Konstruktor menginisialisi saldo (parameter 1) dan suku bunga (parameter 2)
+	// Set suku bunga 0.0 apabila suku bunga bernilai negatif
+	RekeningGiro(double, double);
+
+	// Getter, Setter
+	void setSukuBunga(double);
+	double getSukuBunga() const;
+	
+	// Member Function
+	// Bunga dihitung dari saldo dikali suku bunga
+	double hitungBunga();
+	
+private:
+	double sukuBunga;
+};
+
+#endif
+// RekeningTabungan.h
+#ifndef REKENINGTABUNGAN_H
+#define REKENINGTABUNGAN_H
+
+#include "Rekening.h"
+
+class RekeningTabungan : public Rekening {
+public:
+	// Konstruktor menginisialisi saldo (parameter 1) dan biaya transaksi (parameter 2)
+	// Set biaya transaksi 0.0 apabila biaya transaksi bernilai negatif
+	RekeningTabungan(double, double);
+
+	// Getter, Setter
+	void setBiayaTransaksi(double);
+	double getBiayaTransaksi() const;
+	
+	// Member Function
+	// Panggil fungsi simpanUang dari parent class
+	// Kurangkan saldo dengan biaya transaksi
+	void simpanUang(double);
+
+	// Panggil fungsi tarikUang dari parent class
+	// Kurangkan saldo dengan biaya transaksi hanya jika penarikan uang berhasil
+	// Saldo mungkin saja menjadi negatif apabila setelah penarikan, saldo < biaya transaksi
+	// Kembalikan boolean yang mengindikasikan apakah uang berhasil ditarik atau tidak
+	bool tarikUang(double);
+
+private:
+	double biayaTransaksi;
+};
+
+#endif
+Kumpulkan file Rekening.cpp, RekeningGiro.cpp,  RekeningTabungan.cpp yang dimasukkan ke dalam zip bernama Rekening_<nim>.zip.

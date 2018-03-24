@@ -1,0 +1,23 @@
+Anda diminta untuk membuat definisi dan implementasi dari dua buah kelas yaitu kelas Mobil dan kelas MobilCepat. Berikut akan dijelaskan spesifikasi dari masing-masing kelas.
+
+Kelas Mobil
+
+Kelas Mobil memiliki 3 buah atribut bertipe string (bukan pointer of char) dengan nama tahun, warna, merek dan 3 buah atribut bertipe integer bernama panjang, lebar, tinggi. 
+Kelas Mobil memiliki sebuah constructor yang menerima 6 buah parameter 3 parameter pertamanya bertipe string dengan urutan tahun, warna, merek dan 3 parameter selanjutnya bertipe integer dengan urutan panjang, lebar, tinggi. 
+Kelas Mobil memiliki getter dan setter untuk setiap atributnya.
+Kelas Mobil memiliki dua buah method bernama bunyikanKlakson dan cetakJenisBahanBakar yang tidak menerima parameter apapun. 
+Method bunyikanKlakson pada kelas Mobil akan mencetak "Telolet" (tanpa tanda kutip) yang diikuti dengan newline.
+Method cetakJenisBahanBakar pada kelas Mobil akan mencetak "Air"  (tanpa tanda kutip) yang diikuti dengan newline.
+Kelas MobilCepat
+
+Kelas MobilCepat adalah kelas turunan dari kelas Mobil.
+Kelas MobilCepat memiliki sebuah atribut tambahan bernama maxKecepatan yang bertipe integer.
+Kelas MobilCepat memiliki sebuah constructor yang menerima 3 buah parameter bertipe string dengan urutan tahun, warna, merek dan 4 buah parameter bertipe integer dengan urutan panjang, lebar, tinggi, maxKecepatan
+Kelas MobilCepat memiliki getter dan setter untuk atribut maxKecepatan.
+Seluruh instance MobilCepat harus mencetak "Ngeng...din...din" (tanpa tanda kutip) yang diikuti dengan newline jika method bunyikanKlakson dipanggil.
+Seluruh instance MobilCepat harus mencetak "Avtur"  (tanpa tanda kutip) yang diikuti dengan newline jika method cetakJenisBahanBakar dipanggil.
+Catatan :
+
+Format penamaan getter : get{NamaAtribut}. Contoh : Kelas A memiliki atribut jumlahKotak bertipe integer, maka salah satu getternya adalah fungsi getJumlahKotak dengan tipe balikan integer.
+ Format penamaan setter : set{NamaAtribut}. Contoh : Kelas A memiliki atribut jumlahKotak bertipe integer, maka salah satu setternya adalah prosedur setJumlahKotak yang menerima parameter integer.
+Definisikan kedua kelas diatas pada file Mobil.h dan implementasikan kedua kelas diatas pada file Mobil.cpp. Kemudian kumpulkan kedua file tersebut dalam sebuah zip bernama answer.zip

@@ -1,0 +1,66 @@
+Berikut adalah implementasi dari kelas Vehicle, Car, dan Bike. Kelas-kelas tersebut merepresentasikan kendaraan yang mempunyai turunan mobil dan motor. Atribut dan method dari kelas-kelas tersebut dapat dilihat pada kode implementasi tersebut, di mana setiap method akan menghasilkan keluaran khusus jika dipanggil.
+
+Vehicle.zip
+
+Sebagai contoh program berikut:
+
+int main() {
+    Vehicle v(4,4);
+    v.show();
+    return 0;
+}
+akan menghasilkan keluaran sebagai berikut:
+ctor vehicle 4 4
+wheels 4 capacity 4
+dtor vehicle 4 4
+Unggahlah file main.cpp yang berisi main program, untuk menghasilkan keluaran sebagai berikut:
+ctor vehicle 3 2
+
+cctor vehicle 3 2
+
+ctor vehicle 6 50
+
+ctor vehicle 4 8
+
+ctor car 4 8
+
+cctor vehicle 4 8
+
+cctor car 4 8
+
+ctor vehicle 4 6
+
+ctor car 4 6
+
+ctor vehicle 2 2
+
+ctor bike 2 2
+
+someone is driving this car 4 6
+
+wheels 2 capacity 2
+
+someone is riding this bike2 2
+
+dtor bike 2 2
+
+dtor vehicle 2 2
+
+dtor car 4 6
+
+dtor vehicle 4 6
+
+dtor car 4 8
+
+dtor vehicle 4 8
+
+dtor car 4 8
+
+dtor vehicle 4 8
+
+dtor vehicle 6 50
+
+dtor vehicle 3 2
+
+dtor vehicle 3 2
+

@@ -1,0 +1,36 @@
+Buatlah sebuah file cpp yang berisi implementasi fungsi generik. Berikut merupakan spesifikasi dari fungsi generik pada praktikum ini.
+
+Terdapat dua jenis fungsi : void print(param1) dan void print(param1, param2)
+Buatlah fungsi print(param1) yang dapat menerima satu parameter input bertipe apapun. Fungsi ini akan menghasilkan keluaran "Masukan anda : param1" diakhiri dengan newline.
+Terdapat kasus khusus untuk poin 2 yaitu ketika param1 bertipe char, keluaran yang dihasilkan ialah "Masukan SPECIAL anda : param1" diakhiri dengan newline.
+Buatlah fungsi print(param1, param2) yang dapat menerima dua parameter input bertipe apapun dengan ketentuan : param1 dan param2 boleh bertipe sama, dan param1 dan param2 boleh bertipe beda. Fungsi ini akan menghasilkan keluaran "Masukan anda : param1 dan param2" diakhiri dengan newline.
+Buatlah fungsi print(param1) yang merupakan fungsi generik dengan non-type parameter template bertipe integer. Fungsi ini akan mengeluarkan keluaran sebanyak input dari non-type parameter template yang diberikan. Contoh penggunaan :  
+print<char,3>('a')
+akan menghasilkan keluaran : 
+
+Masukan anda : a
+Masukan anda : a
+Masukan anda : a
+
+
+HINT:
+
+Berikut merupakan beberapa fitur template tambahan pada c++ yang dapat digunakan pada praktikum ini.
+
+1. Template Specialization
+
+Digunakan untuk membuat perlakuan khusus terhadap suatu class atau tipe tertentu.
+
+Specialization Template
+
+
+
+2. Template with Non Type Parameter
+
+Digunakan apabila template memerlukan parameter masukan yang tidak berbentuk class atau tipe.
+
+Non-Type Template
+
+
+
+Kumpulkan satu file bernama Generik.cpp

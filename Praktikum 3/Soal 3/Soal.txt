@@ -1,0 +1,35 @@
+Berikut adalah implementasi dari kelas Box, yaitu kelas yang menyimpan sebuah array dengan ukuran tertentu dan menghasilkan keluaran khusus jika fungsi pada kelas dipanggil.
+
+
+Box.h
+
+Box.cpp
+
+Berikut adalah contoh main program yang menggunakan kelas Box.
+
+int main() {
+    Box b1(2);
+    b1.set(0, 99);
+    b1.show();
+    return 0;
+}
+Dan berikut adalah keluarannya.
+
+ctor 0
+set 0, idx=0, val=99
+show 0: 99 0
+dtor 0
+Tugas anda: Unggah file main.cpp yang isinya adalah main program, yang menggunakan kelas Box untuk menghasilkan keluaran berikut:
+ctor 0
+set 0, idx=0, val=99
+show 0: 99 0
+cctor 1
+ctor 2
+assign 2 = 0
+set 0, idx=0, val=299
+show 0: 299 0
+show 1: 299 0
+show 2: 99 0
+dtor 2
+dtor 1
+dtor 0

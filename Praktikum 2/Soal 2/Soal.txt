@@ -1,0 +1,51 @@
+Anda diberikan ADT Jam versi OOP dengan header yang dapat Anda unduh disini. Pada soal ini Anda diminta mengimplementasikan fungsi-fungsi yang telah didefinisikan pada header file tersebut.
+
+
+
+Adapun berikut adalah keterangan untuk beberapa fungsi:
+
+1. Operator+
+
+Penjumlahan dua objek jam. Apabila hasil penjumlahan melebihi 23:59:59, maka Anda harus mengonversinya seperti tampilan jam digital asli.
+
+Contoh : 24:00:00 dituliskan 00:00:00, 25:00:00 dituliskan 01:00:00, dst
+
+
+
+2. Operator-
+
+Selisih antara dua objek jam. Perhitungan selisih hanya dapat dilakukan jika objek ruas kiri lebih akhir dari atau sama dengan objek ruas kanan.
+
+Jika objek ruas kiri lebih awal, maka kembalikan nilai objek ruas kiri.
+
+Contoh: 00:00:00 - 00:00:01 = 00:00:00
+
+
+
+3. Operator=
+
+Melakukan assignment pada objek jam dengan input objek jam lain.
+
+
+
+4. Operator< dan Operator>
+
+Membandingkan kedua objek jam. Operator< akan bernilai true, jika objek jam pada ruas kiri lebih awal daripada ruas kanan.
+
+Sebaliknya, Operator> akan bernilai false, jika objek jam pada ruas kiri lebih awal daripada ruas kanan.
+
+Contoh: 00:00:00 < 00:00:01 = true; 00:00:00 > 00:00:01 = false
+
+
+
+5. printTime
+
+Menuliskan jam dalam format hh:mm:ss diakhiri dengan newline. Perhatikan bahwa setiap parameter harus dituliskan 2 digit.
+
+
+
+Anda tidak perlu mengecek kevalidan setiap parameter pada saat konstruksi objek (jam < 23, menit < 59, dll), karena masukan yang akan dites dipastikan valid.
+
+
+
+Pada soal ini Anda diminta mengunggah file Time.cpp saja.

@@ -1,0 +1,72 @@
+Tentu anda masih ingat dengan kelas Complex, bukan?
+
+Terjemahkan kelas Kompleks yang pernah anda buat ke dalam bahasa Java.
+Sebagai pengingat, berikut menjadi header kelas kompleks yang pernah anda buat dalam bahasa C++.
+
+
+#ifndef COMPLEX_HPP
+#define COMPLEX_HPP
+
+using namespace std;
+
+class Complex {
+	public:
+		// ctor
+		// inisialisasi real dan imaginer dengan 0
+		Complex();
+		// inisialisasi real dengan paramater pertama dan imaginer dengan parameter kedua
+		Complex(int, int);
+		
+		// Getter, Setter
+		int getReal() const;
+		int getImaginer() const;
+		void setReal(int);
+		void setImaginer(int);
+
+		Complex operator +(Complex const &comp) const;
+		Complex operator -(Complex const &comp) const;
+		Complex operator *(Complex const &comp) const;
+
+	private: 
+		int real, imaginer;
+};
+
+#endif
+
+
+Karena operator overloading tidak memungkinkan, terdapat beberapa perubahan pada kelas. Untuk setiap operator +, -, dan * implementasikan ke dalam sebuah fungsi berikut:
+
+// Mengembalikan objek Complex dengan nilai ini ditambah b
+public Complex plus(Complex b)
+
+// Mengembalikan objek Complex dengan nilai ini dikurangi b
+
+public Complex minus(Complex b)
+
+// Mengembalikan objek Complex dengan nilai ini dikali b
+
+public Complex multiply(Complex b)
+
+Review Bilangan Kompleks. Bilangan kompleks merupakan bilangan yang berbentuk a + bi, dimana a disebut sebagai bagian real, dan b disebut sebagai bagian imajiner.
+
+Berikut merupakan aturan dari operasi yang ada pada bilangan kompleks
+
+Operator +
+
+	(a + b i) + (c + d i) = (a + c) + (b + d) i
+
+
+
+Operator -
+
+	(a + b i) – (c + d i) = (a – c) + (b – d) i
+
+
+
+Operator *
+
+	(a + b i) * (c + d i) = (a * c – b * d) + (a * d + b * c) i
+
+
+
+Kumpulkan file dengan nama Complex.java.

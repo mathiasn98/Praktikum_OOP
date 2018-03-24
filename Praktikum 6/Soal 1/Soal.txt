@@ -1,0 +1,61 @@
+Pada beberapa praktikum sebelumnya, anda telah membuat sebuah kelas Complex. Hanya saja, kelas tersebut hanya dapat mengelola tipe data integer.
+
+Praktikum kali ini, anda diberikan sekali lagi header kelas Complex berbeda yang lebih komplet.
+
+
+#ifndef COMPLEX_HPP
+#define COMPLEX_HPP
+
+using namespace std;
+
+class Complex {
+	public:
+		// ctor
+		// inisialisasi real dan imaginer dengan 0
+		Complex();
+		// inisialisasi real dengan paramater pertama dan imaginer dengan parameter kedua
+		Complex(int, int);
+		
+		// Getter, Setter
+		int getReal() const;
+		int getImaginer() const;
+		void setReal(int);
+		void setImaginer(int);
+
+		Complex operator +(Complex const &comp) const;
+		Complex operator -(Complex const &comp) const;
+		Complex operator *(Complex const &comp) const;
+		Complex& operator +=(const Complex&);
+		Complex& operator -=(const Complex&);
+		Complex& operator *=(const Complex&);
+
+	private: 
+		int real, imaginer;
+};
+
+#endif
+
+
+Review Bilangan Kompleks. Bilangan kompleks merupakan bilangan yang berbentuk a + bi, dimana a disebut sebagai bagian real, dan b disebut sebagai bagian imajiner.
+
+Berikut merupakan aturan dari operasi yang ada pada bilangan kompleks
+
+Operator +
+
+	(a + b i) + (c + d i) = (a + c) + (b + d) i
+
+
+
+Operator -
+
+	(a + b i) – (c + d i) = (a – c) + (b – d) i
+
+
+
+Operator *
+
+	(a + b i) * (c + d i) = (a * c – b * d) + (a * d + b * c) i
+
+
+
+Anda diminta untuk mengubah header kelas Complex di atas menjadi kelas Complex Generic beserta definisi header dengan lengkap. Kumpulkan file dengan nama Complex.hpp.

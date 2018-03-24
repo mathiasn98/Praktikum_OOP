@@ -1,0 +1,60 @@
+Jebakan Berhadiah
+
+
+[Soal Bonus] Seorang teman kalian memberi kalian sebuah teka-teki (ada kemungkinan pertanyaan jebakan) berhadiah terkait inheritance dan polymorphism. Diberikan kelas A dan kelas B sebagai berikut.
+
+// A.hpp
+#ifndef A_HPP
+#define A_HPP
+
+class A {
+  public:
+    int getValueA() { return numA; }
+    void setValue(int x) { numA = x; }
+    
+  private:
+    int numA;
+};
+
+#endif
+// B.hpp
+#ifndef B_HPP
+#define B_HPP
+
+#include <iostream>
+#include "A.hpp"
+using namespace std;
+
+class B : public A {
+  public:
+    void setValue(int y) { numB = y; }
+    void print() {
+      cout << "(" << getValueA() << ", " << numB << ")" << endl;
+    }
+    
+  private:
+    int numB;
+};
+
+#endif
+Dari kedua kelas tersebut, Anda diminta melanjutkan sebuah main program yang telah dibuat.
+
+// main.cpp
+#include "A.hpp"
+#include "B.hpp"
+
+int main() {
+  B b; /** ANDA HARUS MENGGUNAKAN DEFAULT CONSTRUCTOR */
+  
+  // Your code goes here :)
+  // ...
+  // ...
+  
+  b.print(); // OUTPUT: (888, 10888)
+  return 0;
+}
+sehingga mampu menghasilkan output
+(888, 10888)
+Dapatkah Anda menyelesaikan teka-teki ini? [Harus bisa dong... :)]
+
+Anda hanya perlu mengumpulkan file main.cpp saja.

@@ -1,0 +1,76 @@
+Berikut adalah implementasi dari kelas A,B,C,D.
+public abstract class A {
+    A() {
+        System.out.println("Constructor A");
+    }
+
+    abstract void cetak();
+
+}
+public class B extends A {
+    B() {
+        System.out.println("Constructor B");
+    }
+
+    @Override void cetak() {
+        System.out.println("Cetak B");
+    }
+
+
+}
+public class C extends B {
+    C() {
+        System.out.println("Constructor C");
+    }
+
+    @Override
+    void cetak() {
+        System.out.println("Cetak C");
+    }
+
+}
+public class D extends B {
+    D() {
+        System.out.println("Constructor D");
+    }
+}
+Implementasikan Main.java yang akan menghasilkan keluaran dengan format sebagai berikut.
+Constructor A
+Constructor B
+Constructor A
+Constructor B
+Constructor C
+Constructor A
+Constructor B
+Constructor D
+Constructor A
+Constructor B
+Constructor A
+Constructor B
+Constructor C
+Constructor A
+Constructor B
+Constructor D
+Constructor A
+Constructor B
+Constructor C
+Constructor A
+Constructor B
+Constructor D
+Cetak B
+Cetak C
+Cetak B
+Cetak B
+Cetak C
+Cetak B
+Cetak C
+Cetak B
+
+Berikut adalah template Main.java
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+ 
+

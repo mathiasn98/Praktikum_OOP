@@ -1,0 +1,31 @@
+Anda diberikan sebuah kelas Physic.hpp sebagai berikut :
+
+class Physic {
+    public:
+        //Constructor dengan parameter.
+        Physic(int pressure, int temperature);
+
+        //Kembalikan nilai pressure/temperature (pembagian, pembulatan ke bawah).
+        //Jika temperature bernilai 0, 
+        //maka akan melemparkan sebuah PhysicException dengan pesan "Suhu tidak valid", tanpa newline.
+        int constant();
+
+    private:
+        int pressure;
+        int temperature;
+};
+Anda harus mengimplementasikan kelas PhysicException dengan ketentuan sebagai berikut:
+
+Memiliki member bernama msg dengan tipe std::string (Anda boleh menggunakan tipe lain yang sejenis, namun disarankan tetap menggunakan tipe std::string)
+Memiliki hanya sebuah constructor dengan satu parameter bertipe std::string
+Memiliki method bernama getMsg() yang mengembalikan msg
+Kemudian Anda juga perlu mengimplementasikan main program yang menghasilkan output sebagai berikut (*):
+
+25
+16
+Suhu tidak valid
+Suhu tidak valid
+
+Anda diminta mengumpulkan file PhysicException.hpp, PhysicException.cpp, dan main.cpp dalam sebuah file .zip
+
+(*) Anda bebas menggunakan kombinasi pressure dan temperature berapapun selama bisa menghasilkan output seperti contoh.

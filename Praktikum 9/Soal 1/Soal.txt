@@ -1,0 +1,1 @@
+Masihkah Anda ingat dengan ADT Jam yang Anda kerjakan dengan bahasa C++? Pada soal ini, Anda akan mengimplementasikan ulang kelas Time dalam bahasa Java. Lengkapi berkas Time.java berikut.

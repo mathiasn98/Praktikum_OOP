@@ -1,0 +1,74 @@
+STL (Standard Template Library) adalah sebuah library yang menyediakan struktur data dan fungsi yang sering digunakan dalam programming seperti array, stack, queue, dll. Pada soal ini anda diminta menggunakan sebuah STL, yaitu vector yang dapat dilihat dokumentasinya pada laman ini. Anda diperbolehkan membuka referensi tersebut, tetapi tidak diperbolehkan membuka referensi lain, terutama forum seperti stackoverflow.com atau laman lainnya.
+
+Vector yang akan digunakan dapat menerima masukan integer. Gunakanlah vector tersebut dan fungsi-fungsi yang sudah disediakan untuk menghitung modus, mean, dan median dari data-data tersebut. Selain fungsi-fungsi dari vector, anda juga dapat menggunakan fungsi-fungsi standard C++ yang kompatibel dengan vector seperti search, sort, dll
+
+
+
+Buatlah sebuah main program yang akan menerima masukan sebagai berikut:
+
+1. Baris pertama adalah jumlah masukan yang akan diterima (n)
+
+2. Baris kedua sampai baris ke n+1 adalah masukan angka untuk dihitung
+
+
+
+Dan akan memberikan keluaran dengan format:
+
+1. Baris pertama adalah mean (rata-rata).
+
+2. Baris kedua adalah median (nilai tengah).
+
+3. Baris ketiga adalah modus (nilai dengan kemunculan terbanyak). Jika ada beberapa angka yang mempunyai frekuensi kemunculan yang sama, maka angka terkecil dengan kemunculan paling banyaklah yang menjadi modus.
+
+4. Baris keempat adalah vector awal, tetapi ditambahkan dengan modus sebanyak frekuensi kemunculannya
+
+5. Baris kelima adalah size vector yang sudah ditambahkan dengan modus sebanyak frekuensi kemunculannya
+
+
+Jika tidak ada masukan data (n=0) atau jumlah data tidak valid, maka mean, median, modus, dan isi data bernilai '-', dan size vector bernilai 0.
+
+Contoh:
+
+Masukan:
+5
+2
+1
+4
+5
+3
+
+Keluaran:
+3
+3
+1
+2 1 4 5 3 1//modusnya adalah 1 sebanyak 1 ditambahkan di akhir vector
+6
+
+Masukan:
+6
+1
+2
+3
+4
+5
+5
+
+Keluaran:
+3.33333
+3.5
+5
+1 2 3 4 5 5 5 5//modusnya adalah 5 sebanyak 2, ditambahkan di akhir vector
+8
+
+Masukan:
+0
+
+Keluaran:
+-
+-
+-
+-
+0
+Submitlah main program tersebut dalam sebuah file bernama main.cpp.
+
+NOTE: Perhatikan output yang diberikan harus sesuai dengan format. Tidak ada ekstra spasi di setiap baris dan setiap baris diakhiri dengan new line.

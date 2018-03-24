@@ -1,0 +1,21 @@
+Anda diminta untuk membuat definisi dan implementasi dari dua buah kelas yaitu kelas Alamat dan kelas Mahasiswa. Berikut akan dijelaskan spesifikasi dari masing-masing kelas.
+
+Kelas Alamat
+Kelas alamat memiliki tiga buah atribut private bertipe string. Ketiga atribut tersebut adalah provinsi, kota dan jalan.
+Kelas alamat memiliki dua constructor, getter, dan setter serta sebuah fungsi bernama getAlamatLengkap.
+Constructor pertama tidak menerima parameter apapun.
+Constructor kedua akan menerima tiga buah parameter bertipe string dengan urutan provinsi, kota dan jalan.
+Fungsi getAlamatLengkap tidak menerima parameter dan mengembalikan string dengan format : "Jalan {jalan}, {kota}, {provinsi}.".
+Kelas Mahasiswa
+Kelas mahasiswa akan memiliki dua atribut private bertipe pointer of char. Kedua atribut tersebut adalah nama dan nim. Selain itu kelas mahasiswa juga memiliki sebuah atribut bernama alamat yang bertipe kelas Alamat.
+kelas mahasiswa memiliki dua constructor, copy constructor, destructor, getter dan setter.
+Constructor pertama menerima dua buah parameter string dengan urutan nama, dan nim.
+Constructor kedua menerima tiga buah parameter yaitu string nama, string nim dan Alamat alamat.
+Destructor melakukan dealokasi memory dari pointer of char.
+Catatan :
+
+Format penamaan getter : get{NamaAtribut}. Contoh : Kelas A memiliki atribut jumlahKotak bertipe integer, maka salah satu getternya adalah fungsi getJumlahKotak dengan tipe balikan integer.
+ Format penamaan setter : set{NamaAtribut}. Contoh : Kelas A memiliki atribut jumlahKotak bertipe integer, maka salah satu setternya adalah prosedur setJumlahKotak yang menerima parameter integer.
+c_str() atau strcpy dapat digunakan untuk mengubah string menjadi pointer of char.
+Diharapkan mengimplementasikan sendiri copy constructor agar copy constructor tidak melakukan bitwise copy.
+Kumpulkan Alamat.hpp, Alamat.cpp, Mahasiswa.hpp, dan Mahasiswa.cpp dalam sebuah zip dengan format nama :  answer.zip

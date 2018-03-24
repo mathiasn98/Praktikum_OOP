@@ -1,0 +1,64 @@
+Diberikan kerangka kelas Rekening dan Transaksi yang menyimpan detil penyimpanan dan penarikan uang sebagai berikut:
+
+Transaksi.java
+
+public class Transaksi {
+    // Rekening yang merupakan asal transaksi ini
+    private Rekening rekening;
+    // Perubahan saldo pada rekening oleh transaksi ini
+    private double perubahan;
+
+    // Konstruktor transaksi
+    public Transaksi(Rekening rekening, double perubahan) {
+    }
+
+    // Mengembalikan rekening yang merupakan asal transaksi ini
+    public Rekening getRekening() {
+    }
+
+    // Mengembalikan perubahan untuk transaksi ini
+    public double getPerubahan() {
+    }
+}
+Rekening.java
+
+public class Rekening {
+    // Daftar transaksi yang telah dilakukan pada rekening ini
+    private Transaksi[] daftarTransaksi;
+    // Jumlah transaksi yang telah dilakukan pada rekening ini
+    private int jumlahTransaksi;
+    // Jumlah transaksi maksimum yang dapat disimpan
+    private int maxTransaksi;
+
+    // Konstruktor, dengan nilai maxTransaksi awal
+    public Rekening(int maxTrans) {
+    }
+
+    // Getter
+    public int getJumlahTransaksi() {
+    }
+    public int getMaxTransaksi() {
+    }
+
+    // Mengembalikan array baru yang berisi `count` transaksi terakhir yang dilakukan
+    public Transaksi[] getLastTransaksi(int count) {
+    }
+
+    // Mengembalikan saldo pada rekening, yaitu hasil penjumlahan perubahan semua transaksi yang telah dilakukan
+    public double getSaldo() {
+    }
+
+    // Membuat transaksi baru yang menambahkan `amount` uang pada rekening.
+    // `amount` harus positif dan harus ada sisa tempat di rekening.
+    // Mengembalikan status berhasil/gagal penyimpanan uang. (Jika berhasil, mengembalikan true)
+    public boolean simpanUang(double amount) {
+    }
+
+    // Membuat transaksi baru yang mengurangi `amount` uang pada rekening.
+    // `amount` harus positif dan lebih kecil dari saldo, dan harus ada sisa tempat di rekening.
+    // Harus ada sisa tempat di rekening.
+    // Mengembalikan status berhasil/gagal penarikan uang. (Jika berhasil, mengembalikan true)
+    public boolean tarikUang(double amount) {
+    }
+}
+Kumpulkan Rekening.java dan Transaksi.java dalam satu berkas .zip dengan nama bebas.
